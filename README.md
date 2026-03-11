@@ -24,7 +24,11 @@ He seleccionado la versión Expert frente a la Professional o Essentials por su 
 Para replicar este entorno de auditoría en **Windows 11**, sigo estos pasos de manera secuencial:
 
 1. **Descarga de software:** obtengo el instalador oficial de **Nessus Expert** directamente desde el portal de descargas de Tenable, seleccionando la arquitectura compatible con mi sistema.
-2. **Ejecución del instalador:** ejecuto el archivo `.msi` y sigo las instrucciones del asistente de instalación. Durante este proceso, verifico que el servicio `nessusd` se inicie correctamente en el sistema.
+2. **Ejecución del instalador:** ejecuto el archivo `.msi` y sigo las instrucciones del asistente. Durante este proceso, verifico que el servicio `nessusd` se inicie correctamente. Para comprobar el estado del servicio en Windows 11, utilizo uno de los siguientes métodos:
+
+    * **Mediante PowerShell (Recomendado):** abro una terminal como administrador y ejecuto el comando:
+        `Get-Service -Name "Tenable Nessus"`
+    * **Mediante la interfaz gráfica:** presiono `Win + R`, escribo `services.msc` y localizo el servicio llamado **Tenable Nessus**. Su estado debe figurar como **"En ejecución"** (Running).
 3. **Activación de la instancia:** accedo a la interfaz web a través de la dirección `https://localhost:8834`. Utilizo mi clave de licencia **Trial** (limitada a 32 hosts) para completar el registro y activar todas las capacidades de la versión Expert.
 4. **Actualización crítica de Plugins:** una vez activado, espero a que la herramienta descargue e instale las últimas definiciones de vulnerabilidades. Considero este paso fundamental para garantizar que los resultados del escaneo sean precisos y detecten las amenazas más recientes.
 
@@ -44,8 +48,7 @@ Para asegurar un rendimiento óptimo de **Nessus Expert** durante los escaneos i
 * **Procesador (CPU):** 4 núcleos de 2 GHz (mínimo recomendado para evitar cuellos de botella durante la compilación de plugins).
 * **Memoria RAM:** 8 GB de RAM (se recomienda disponer de al menos 4 GB libres antes de iniciar el servicio `nessusd`).
 * **Espacio en Disco:** 10 GB de espacio libre dedicado principalmente a la base de datos de plugins y al almacenamiento de los historiales de escaneo.
-* **Navegador Web:** Google Chrome, Mozilla Firefox o Microsoft Edge actualizado para visualizar correctamente los gráficos del dashboard.
-* **Navegador Web:** Google Chrome, Mozilla Firefox o Microsoft Edge actualizado.
+* **Navegador Web:** Google Chrome, Mozilla Firefox o Microsoft Edge actualizado para visualizar correctamente los gráficos del dashboard y estar actualizado.
 
 > **Nota de rendimiento:** durante la fase de ejecución, monitorizo el Administrador de Tareas de Windows 11. Observo que el proceso de compilación de plugins es el que mayor carga de CPU genera. Por ello, cierro aplicaciones innecesarias antes de lanzar un escaneo avanzado para garantizar la integridad de los tiempos de respuesta del análisis.
 

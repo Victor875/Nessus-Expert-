@@ -30,3 +30,29 @@ Como utilizo una cuenta de administrador local, aplico este cambio en el registr
 New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name "LocalAccountTokenFilterPolicy" -Value 1 -PropertyType DWord -Force
 ```
 ![ByPass de UAC](Deshabilitar_UAC.jpg)
+
+## 2. Configuración en Nessus Expert
+
+Una vez preparado el sistema operativo, procedo a configurar la tarea de escaneo en la consola de Nessus, transformando un análisis básico en una auditoría profesional.
+
+### Paso 1: Gestión de Credenciales
+* En la configuración del escaneo, accedo a la pestaña **Credentials** > **Windows**.
+* Configuro el usuario administrativo y la contraseña de mi equipo.
+* **Authentication Method:** selecciono el método **Password** para permitir que Nessus realice la inyección de credenciales mediante SMB.
+
+![Configuración de credenciales de administrador en Nessus](Configuración_credenciales.jpg)
+
+### Paso 2: Auditoría basada en el Estándar CIS
+En lugar de un escaneo genérico, cargo una política de cumplimiento basada en el benchmark actualizado **CIS Microsoft Windows 11 Stand-alone v4.0.0 L1**.
+
+* **Objetivo:** evaluar el nivel de *Hardening* del equipo frente a un estándar de la industria altamente riguroso.
+* **Proceso:** Nessus verifica automáticamente cientos de configuraciones, como la longitud mínima de contraseñas, servicios innecesarios activos y políticas de auditoría de eventos específicas para la versión más reciente de Windows 11.
+
+![Selección de política de cumplimiento CIS v4.0.0](Política_compilance.jpg)
+
+
+### 3. Análisis de Resultados Avanzados
+A diferencia del escaneo básico, esta prueba revela vulnerabilidades críticas que no son detectables a través de la red, como:
+* Parches de seguridad (KBs) faltantes en el sistema operativo.
+* Configuraciones de red inseguras a nivel de protocolo (ej. NetBIOS activo).
+* Software de terceros desactualizado con exploits conocidos.

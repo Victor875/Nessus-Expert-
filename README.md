@@ -9,15 +9,15 @@ En este proyecto, realizo una auditoría de seguridad utilizando Nessus Expert s
 
 He seleccionado la versión Expert frente a la Professional o Essentials por su capacidad de ir más allá de la red tradicional. Como estoy documentando una auditoría integral, necesito las funciones exclusivas que esta versión ofrece:
 
-### Comparativa Técnica: Nessus Expert
+### Comparativa Técnica: Nessus Expert (Análisis General)
 
 | Característica | Ventajas (Pros) | Desventajas (Contras) |
 | :--- | :--- | :--- |
-| **Visibilidad Externa** | **EASM:** permite descubrir activos en internet que no están inventariados. | Requiere configuración DNS precisa; si no, los resultados son limitados. |
-| **Infraestructura Cloud** | **Escaneo de IaC:** audita plantillas de Terraform o CloudFormation antes del despliegue. | La versión de prueba limita la profundidad de análisis en la nube. |
-| **Priorización de Riesgos** | **Métrica VPR:** prioriza vulnerabilidades según la probabilidad real de explotación. | Requiere conexión constante a Tenable para actualizar inteligencia de amenazas. |
-| **Escalabilidad** | Permite gestionar hasta 32 hosts en la versión Trial, ideal para auditorías específicas. | El límite de 32 hosts es insuficiente para redes corporativas medianas. |
-| **Facilidad de Uso** | Interfaz intuitiva sobre Windows 11 con reportes ejecutivos profesionales. | El consumo de RAM de `nessusd.exe` es elevado durante escaneos intensivos. |
+| **Capacidad de Detección** | Posee una de las bibliotecas de plugins más extensas del mercado, actualizándose casi a diario. | La profundidad del análisis puede generar falsos positivos que requieren validación manual. |
+| **Métricas de Riesgo** | El sistema **VPR** permite priorizar vulnerabilidades basándose en la probabilidad real de ataque. | Algunas métricas avanzadas requieren que el activo sea escaneado con credenciales de administrador. |
+| **Versatilidad de Escaneo** | Permite desde auditorías rápidas de red hasta análisis profundos de cumplimiento (Compliance) y auditoría web. | La configuración de escaneos muy específicos (Advanced Scans) tiene una curva de aprendizaje elevada. |
+| **Entorno de Trabajo** | La instalación en Windows 11 es estable y la interfaz web es intuitiva para la gestión de reportes. | El motor de escaneo demanda altos recursos de CPU y RAM, limitando el uso de otras aplicaciones. |
+| **Licenciamiento Trial** | La versión Expert permite probar funciones de última generación bajo un límite de 32 hosts. | La limitación de hosts impide realizar auditorías de redes de clase C completas (/24). |
 
 ## Guía de Instalación y Configuración
 

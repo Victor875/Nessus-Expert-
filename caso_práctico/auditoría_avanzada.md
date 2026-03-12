@@ -93,4 +93,4 @@ La ejecución de esta auditoría avanzada bajo el estándar **CIS v4.0.0** me ha
 * **Valor para la organización:** este tipo de auditorías periódicas permiten establecer una línea base de seguridad real, facilitando la toma de decisiones para futuras inversiones en ciberseguridad y garantizando que los activos cumplen con las normativas vigentes.
 
 ---
-[Volver a la documentación](../Documentación.md)
+[Volver a la documentación](../README.md)

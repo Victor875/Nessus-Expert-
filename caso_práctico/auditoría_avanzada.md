@@ -14,7 +14,10 @@ Para permitir que Nessus consulte el registro del sistema, sigo estos pasos:
 2. Localizo el servicio llamado Registro remoto (Remote Registry).
 3. Hago clic derecho sobre él y selecciono Propiedades.
 4. Establezco el Tipo de inicio en Automático y hago clic en el botón Iniciar.
-5. Comando de verificación: también puedo validarlo rápidamente desde PowerShell: `Get-Service RemoteRegistry`
+5. Comando de verificación: también puedo validarlo rápidamente desde PowerShell:
+```powershell
+Get-Service RemoteRegistry
+```
 
 ![Estado del servicio Remote Registry](../img/caso_práctico/Comprobar_servicio_remoto.jpg)
 

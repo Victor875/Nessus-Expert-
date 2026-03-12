@@ -70,22 +70,24 @@ Tras lanzar el escaneo, monitorizo la pestaña de hallazgos. Una auditoría con 
 
 ### A. Vulnerabilidades y Parches (VPR)
 Gracias a las credenciales, Nessus puede listar todos los programas instalados y compararlos con su base de datos.
-* **Hallazgos:** observo los parches de seguridad faltantes en el sistema operativo y en software de terceros (como navegadores o runtimes).
-* **Priorización:** utilizo la métrica VPR para identificar qué vulnerabilidades tienen más probabilidad de ser explotadas en el mundo real.
+* **Hallazgos:** observo los parches de seguridad faltantes tanto en el sistema operativo como en aplicaciones críticas.
+* **Priorización:** utilizo la métrica VPR (Vulnerability Priority Rating) para identificar qué vulnerabilidades tienen más probabilidad de ser explotadas en el mundo real, permitiéndome enfocar los esfuerzos de remediación.
 
-![Panel de vulnerabilidades detectadas](../img/caso_practico/resultados_vulnerabilidades.jpg)
+![Panel de vulnerabilidades detectadas](../img/caso_práctico/vulnerabilidades.jpg)
 
 ### B. Análisis de Cumplimiento (Compliance)
 Esta es la parte más detallada de la práctica, donde veo el resultado de la política **CIS v4.0.0**.
 * **Puntos de control:** los resultados muestran checks en **verde** (configuración segura), **amarillo** (advertencias) y **rojo** (fallos de configuración que requieren atención inmediata).
 * **Detalles de remediación:** al hacer clic en un fallo, Nessus me indica exactamente qué valor de registro o directiva de grupo debo cambiar para cumplir con el estándar.
 
-![Dashboard de cumplimiento CIS Windows 11](../img/caso_practico/resultados_compliance.jpg)
+![Dashboard de cumplimiento CIS Windows 11](../img/caso_práctico/cumplimiento.jpg)
 
 ### C. Resumen del Estado de Seguridad
-Finalmente, analizo el gráfico circular que resume el porcentaje de cumplimiento. Un sistema recién instalado sin *Hardening* suele presentar un alto número de fallos en este apartado, lo que justifica la necesidad de esta auditoría.
+Finalmente, analizo el gráfico circular que resume el porcentaje de cumplimiento. Un sistema recién instalado sin *Hardening* suele presentar un alto número de fallos en este apartado, lo que justifica la necesidad de esta auditoría (en mi caso, es un Windows 11 recién instalado).
 
-![Gráfico resumen de la auditoría](../img/caso_practico/grafico_resumen.jpg)
+![Gráfico resumen de la auditoría](../img/caso_práctico/Resumen.jpg)
+![Gráfico resumen de la auditoría](../img/caso_práctico/Resumen2.jpg)
+
 ## 4. Conclusión de la Práctica
 
 La ejecución de esta auditoría avanzada bajo el estándar **CIS v4.0.0** me ha permitido extraer las siguientes conclusiones fundamentales sobre la seguridad de activos:
